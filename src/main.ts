@@ -2,6 +2,7 @@ import singleSpaVue from 'single-spa-vue';
 import { h, createApp } from 'vue';
 
 import App from './App';
+import { i18n } from './configs/i18n';
 import router from './router';
 
 const vueLifecycles = singleSpaVue({
@@ -22,6 +23,7 @@ const vueLifecycles = singleSpaVue({
 	},
 	handleInstance(app) {
 		app.use(router);
+		app.use(i18n);
 	},
 });
 

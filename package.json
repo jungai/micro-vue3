@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "serve:standalone": "vue-cli-service serve --mode standalone"
+    "serve:standalone": "vue-cli-service serve --mode standalone",
+		"lint": "eslint --ext .tsx,.js,.ts,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.3",

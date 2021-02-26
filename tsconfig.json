@@ -1,4 +1,8 @@
 {
+	"env": {
+		"browser": true,
+		"node": true,
+	},
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -35,5 +39,5 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }
