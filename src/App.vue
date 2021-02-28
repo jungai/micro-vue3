@@ -1,30 +1,27 @@
 <template>
-	<div id="nav">
-		<router-link to="/">Home</router-link> |
-		<router-link to="/about">About</router-link>
+	<div>
+		<p>{{ message }}</p>
+		<p>{{ count }}</p>
+		<button @click="increseCount">inc</button>
+		<hr />
+		<Count msg="hello" />
+		<hr />
+		<Field />
 	</div>
-	<router-view />
 </template>
 
-<style>
-#app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: #2c3e50;
-}
+<script setup lang="ts">
+import './global.css';
+import Count from '@/component/Count.vue';
+import Field from '@/component/Field.vue';
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-#nav {
-	padding: 30px;
-}
+const { t } = useI18n();
 
-#nav a {
-	font-weight: bold;
-	color: #2c3e50;
-}
+const count = ref<number>(0);
 
-#nav a.router-link-exact-active {
-	color: #42b983;
-}
-</style>
+const message = t('msg');
+
+const increseCount = () => count.value++;
+</script>

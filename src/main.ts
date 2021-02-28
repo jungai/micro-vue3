@@ -1,7 +1,7 @@
 import singleSpaVue from 'single-spa-vue';
 import { h, createApp } from 'vue';
 
-import App from './App';
+import App from './App.vue';
 import { i18n } from './configs/i18n';
 import router from './router';
 

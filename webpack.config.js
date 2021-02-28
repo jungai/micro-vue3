@@ -14,6 +14,7 @@ module.exports = () => ({
 		host: '0.0.0.0',
 		port: 8089,
 	},
+	externals: ['vue-i8n'],
 	resolve: {
 		alias: {
 			'@': path.resolve(__dirname, 'src'),
